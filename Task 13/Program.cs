@@ -8,7 +8,9 @@
 
 // 32679 -> 6
 
+Console.WriteLine("Введите любое целое число");
 int anyNumber = Convert.ToInt32(Console.ReadLine());
+int workNumber = Math.Abs(anyNumber);
 
 int FindThirdDigit(int num)
 {
@@ -21,6 +23,12 @@ int FindThirdDigit(int num)
     return result;
 }
 
-int thirdDigit = FindThirdDigit(anyNumber);
-
-Console.WriteLine(thirdDigit);
+if (workNumber < 100)
+{
+    Console.WriteLine("В введенном числе отсутствует третья цифра");
+}
+else
+{
+    int thirdDigit = FindThirdDigit(workNumber);
+    Console.WriteLine($"Третьей цифрой введенного числа является {thirdDigit}");
+}
