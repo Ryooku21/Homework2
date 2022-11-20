@@ -8,14 +8,20 @@
 
 Console.WriteLine("Введите трехзначное число");
 int threeDigitNum = Convert.ToInt32(Console.ReadLine());
-// int secondDigit = threeDigitNum / 10 % 10;
 
-int FindSecondDigit()
+int FindSecondDigit(int number)
 {
-int result = threeDigitNum / 10 % 10;
-return result;
+    int result = threeDigitNum / 10 % 10;
+    return result;
 }
 
-int secondDigit = FindSecondDigit();
 
-Console.WriteLine($"Второй цифрой в числе является {secondDigit}"); 
+if (threeDigitNum > 99 && threeDigitNum < 1000)
+{
+    int secondDigit = FindSecondDigit(threeDigitNum);
+    Console.WriteLine($"Второй цифрой в числе является {secondDigit}");
+}
+else
+{
+    Console.WriteLine("Число введено некорректно, введите трехзначное число!");
+}
