@@ -8,6 +8,7 @@
 
 Console.WriteLine("Введите трехзначное число");
 int threeDigitNum = Convert.ToInt32(Console.ReadLine());
+int workNumber = Math.Abs(threeDigitNum);
 
 int FindSecondDigit(int number)
 {
@@ -16,9 +17,9 @@ int FindSecondDigit(int number)
 }
 
 
-if (threeDigitNum > 99 && threeDigitNum < 1000)
+if (workNumber > 99 && workNumber < 1000)
 {
-    int secondDigit = FindSecondDigit(threeDigitNum);
+    int secondDigit = FindSecondDigit(workNumber);
     Console.WriteLine($"Второй цифрой в числе является {secondDigit}");
 }
 else
